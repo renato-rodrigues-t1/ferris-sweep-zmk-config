@@ -36,7 +36,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  F       │  P       │  G       │   │  J       │  L       │  U       │  Y       │  [       │
-            &mt ESC Q  &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &kp LBKT
+            &mt ESC Q  &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &lt 3 LBKT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  D       │   │  M       │  N       │  E       │  I       │ O        │
             &kp A      &lt 3 R     &lt 1 S    &lt 2 T     &kp D          &kp M     &kp N       &kp E      &kp I    &kp  O
@@ -53,7 +53,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  1       │  2       │  3       │          │   │          │          │  UP      │          │          │
-            &bt BT_CLR  &trans    &trans      &mkp MB1    &trans      &trans       &trans    &kp UP     &trans    &trans
+            &trans     &trans    &trans      &trans    &trans      &trans       &trans    &kp UP     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │          │   │ HOME     │ LEFT     │ DOWN     │ RIGHT    │    END   │
             &sys_reset  &bootloader   &reset   &kp N6     &trans      &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT   &kp END
