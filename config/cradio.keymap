@@ -53,7 +53,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  1       │  2       │  3       │          │   │          │          │  UP      │          │          │
-            &bt BT_CLR  &bt BT_SEL 0  &ext_power EP_ON  &mkp MB1     &trans         &trans       &trans    &kp UP     &trans    &trans
+            &bt BT_CLR  &bt BT_SEL 0  &ext_power EP_ON  &mkp MB1 &trans   &trans       &trans    &kp UP     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │          │   │ HOME     │ LEFT     │ DOWN     │ RIGHT    │    END   │
             &sys_reset  &bootloader   &reset   &kp N6     &trans      &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT   &kp END
