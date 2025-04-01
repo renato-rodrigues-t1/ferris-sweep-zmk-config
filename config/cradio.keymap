@@ -2,11 +2,12 @@
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
 // Home row mods macro
+
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
@@ -25,6 +26,7 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <1 2>;
             then-layer = <3>;
@@ -33,71 +35,40 @@
 
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  G       │   │  J       │  L       │  U       │  Y       │  [       │
-            &kp Q      &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &kp LBKT
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S       │  T       │  D       │   │  M       │  N       │  E       │  I       │  O       │
-           &mt LSHFT A   &kp R      &lt 1 S      &kp T      &kp D          &kp M      &kp N      &kp E      &kp I      &kp O
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  K       │  H       │ , <      │ . >      │ / ?      │
-           &kp Z       &kp X      &kp C      &kp V      &kp B          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                     &lt 2 BSPC     &mt LCMD SPACE    &kp ENTER  &kp BSPC
-        //                        ╰──────────────┴────────────────╯  ╰──────────┴──────────╯
+&kp Q        &kp W  &kp F    &kp P       &kp G             &kp J      &kp L     &kp U      &kp Y    &kp LBKT
+&mt LSHFT A  &kp R  &lt 1 S  &lt 2 T     &kp D             &kp M      &kp N     &kp E      &kp I    &kp O
+&kp Z        &kp X  &kp C    &kp V       &kp B             &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
+                             &lt 2 BSPC  &mt LCMD SPACE    &kp ENTER  &kp BSPC
             >;
         };
 
         right_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │          │          │ UP       │          │          │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &trans     &trans     &kp UP      &trans    &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ HOME     │ LEFT     | DOWN     │ RIGHT    │ END      │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT   &kp END
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans    &mkp LCLK   &trans    &mkp RCLK     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp DEL     &trans        &trans     &kp DEL
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+&kp INS     &kp N1  &kp N2  &kp N3   &trans    &trans    &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&kp DEL     &kp N4  &kp N5  &kp N6   &trans    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
+&caps_word  &kp N7  &kp N8  &kp N9   &kp N0    &trans    &mkp LCLK  &trans    &mkp RCLK          &trans
+                            &kp DEL  &trans    &trans    &kp DEL
             >;
         };
 
         left_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
+&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
+                              &trans    &trans       &trans     &trans
             >;
         };
 
         tri_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
+                             &trans      &trans          &trans  &trans
             >;
         };
     };
