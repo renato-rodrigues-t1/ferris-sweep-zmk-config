@@ -33,6 +33,21 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <17 18>;
+        };
+
+        ltab {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <17 16>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
