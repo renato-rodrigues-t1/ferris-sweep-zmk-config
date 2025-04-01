@@ -42,9 +42,8 @@
         };
 
         ltab {
-            bindings = <&kp LG(TAB)>;
+            bindings = <&kp LS(TAB)>;
             key-positions = <17 16>;
-            layers = <0>;
         };
 
         pv {
@@ -68,24 +67,33 @@
         };
     };
 
+    macros {
+        pass: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp S &kp E &kp R &kp P &kp E &kp P &kp N3 &kp N &kp STAR>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q        &kp W  &kp F    &kp P       &kp G             &kp J      &kp L     &kp U      &kp Y    &kp LBKT
-&mt LSHFT A  &kp R  &lt 1 S  &lt 2 T     &kp D             &kp M      &kp N     &kp E      &kp I    &kp O
-&kp Z        &kp X  &kp C    &kp V       &lt 3 B           &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
-                             &lt 2 BSPC  &mt LCMD SPACE    &kp ENTER  &kp BSPC
+&mt ESC Q    &kp W    &kp F    &kp P       &kp G             &kp J      &kp L     &kp U      &kp Y    &kp LBKT
+&mt LSHFT A  &lt 4 R  &lt 1 S  &lt 2 T     &kp D             &kp M      &kp N     &kp E      &kp I    &mt RSHFT O
+&kp Z        &kp X    &kp C    &kp V       &lt 3 B           &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
+                               &lt 2 BSPC  &mt LCMD SPACE    &kp ENTER  &kp BSPC
             >;
         };
 
         right_layer {
             bindings = <
-&kp INS     &kp N1  &kp N2  &kp N3   &trans    &trans    &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&kp DEL     &kp N4  &kp N5  &kp N6   &trans    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
-&caps_word  &kp N7  &kp N8  &kp N9   &kp N0    &trans    &mkp LCLK  &trans    &mkp RCLK          &trans
-                            &kp DEL  &trans    &trans    &kp DEL
+&trans  &trans            &trans  &trans          &trans    &trans    &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
+&trans  &trans            &trans  &trans          &trans    &trans    &mkp LCLK  &trans    &mkp RCLK          &trans
+                                  &kp DEL         &trans    &trans    &kp DEL
             >;
         };
 
