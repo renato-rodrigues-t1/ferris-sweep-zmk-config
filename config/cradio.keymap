@@ -75,7 +75,7 @@
             bindings = <
 &kp Q        &kp W  &kp F    &kp P       &kp G             &kp J      &kp L     &kp U      &kp Y    &kp LBKT
 &mt LSHFT A  &kp R  &lt 1 S  &lt 2 T     &kp D             &kp M      &kp N     &kp E      &kp I    &kp O
-&kp Z        &kp X  &kp C    &kp V       &kp B             &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
+&kp Z        &kp X  &kp C    &kp V       &lt 3 B           &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
                              &lt 2 BSPC  &mt LCMD SPACE    &kp ENTER  &kp BSPC
             >;
         };
@@ -105,6 +105,17 @@
 &trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
                              &trans      &trans          &trans  &trans
             >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+
+            label = "mouse";
         };
     };
 };
