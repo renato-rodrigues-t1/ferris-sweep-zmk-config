@@ -65,6 +65,18 @@
             bindings = <&kp SQT>;
             key-positions = <18 19>;
         };
+
+        to-nav {
+            bindings = <&to 1>;
+            key-positions = <16 17 18>;
+            layers = <0>;
+        };
+
+        to-colemak {
+            bindings = <&to 0>;
+            key-positions = <16 17 18>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -81,28 +93,28 @@
 
         default_layer {
             bindings = <
-&mt ESC Q    &kp W    &kp F    &kp P       &kp G             &kp J      &kp L     &kp U      &kp Y    &kp LBKT
-&mt LSHFT A  &lt 4 R  &lt 1 S  &lt 2 T     &kp D             &kp M      &kp N     &kp E      &kp I    &mt RSHFT O
-&kp Z        &kp X    &kp C    &kp V       &lt 3 B           &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
-                               &lt 2 BSPC  &mt LCMD SPACE    &kp ENTER  &kp BSPC
+&mt ESC Q    &kp W    &kp F    &kp P          &kp G             &kp J                   &kp L     &kp U      &kp Y    &kp LBKT
+&mt LSHFT A  &lt 4 R  &lt 1 S  &lt 2 T        &kp D             &kp M                   &kp N     &kp E      &kp I    &mt RSHFT O
+&kp Z        &kp X    &kp C    &kp V          &lt 3 B           &kp K                   &kp H     &kp COMMA  &kp DOT  &kp FSLH
+                               &kp BACKSPACE  &mt LCMD ENTER    &mt LEFT_CONTROL SPACE  &kp BSPC
             >;
         };
 
-        right_layer {
+        nav {
             bindings = <
-&trans  &trans            &trans  &trans          &trans    &trans    &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
-&trans  &trans            &trans  &trans          &trans    &trans    &mkp LCLK  &trans    &mkp RCLK          &trans
-                                  &kp DEL         &trans    &trans    &kp DEL
+&trans  &trans            &trans  &trans          &trans    &trans                          &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans    &kp HOME                        &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
+&trans  &trans            &trans  &trans          &trans    &trans                          &mkp LCLK  &pass     &mkp RCLK          &trans
+                                  &kp DEL         &trans    &mt LA(LS(LC(LEFT_GUI))) SPACE  &kp DEL
             >;
         };
 
-        left_layer {
+        nums {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR           &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS          &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp AMPS   &mt EXCL NUMBER_1  &kp PLUS   &kp PIPE  &trans
-                              &trans    &trans       &trans     &trans
+&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &mt PLUS EQUAL   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &kp RBKT
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &mt ASTRK MINUS  &mt DLLR NUMBER_4       &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &kp GRAVE
+&trans    &trans    &trans    &trans    &trans       &kp AMPS         &mt EXCL NUMBER_1       &mt AT NUMBER_2        &mt HASH NUMBER_3   &kp BACKSLASH
+                              &trans    &trans       &trans           &trans
             >;
         };
 
