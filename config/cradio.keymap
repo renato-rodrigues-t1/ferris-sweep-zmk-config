@@ -87,6 +87,21 @@
             bindings = <&to 3>;
             key-positions = <31 32>;
         };
+
+        win-right {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <7 8>;
+        };
+
+        win-left {
+            bindings = <&kp LG(LEFT_ARROW)>;
+            key-positions = <7 6>;
+        };
+
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <10 11>;
+        };
     };
 
     macros {
