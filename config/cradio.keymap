@@ -36,14 +36,14 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <17 18>;
-        };
-
         ltab {
             bindings = <&kp LS(TAB)>;
             key-positions = <17 16>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <17 18>;
         };
 
         pv {
