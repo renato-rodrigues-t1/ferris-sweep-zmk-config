@@ -76,11 +76,6 @@
             key-positions = <30 33>;
         };
 
-        bootloaders {
-            bindings = <&to 3>;
-            key-positions = <31 32>;
-        };
-
         win-right {
             bindings = <&kp LG(RIGHT)>;
             key-positions = <7 8>;
@@ -99,6 +94,11 @@
         all-windows {
             bindings = <&kp LC(DOWN)>;
             key-positions = <13 12 11>;
+        };
+
+        spotlight {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <31 32>;
         };
     };
 
