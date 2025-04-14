@@ -50,12 +50,12 @@
         };
 
         cp {
-            bindings = <&kp LG(C)>;
+            bindings = <&kp LG(LEFT_ARROW)>;
             key-positions = <11 12>;
         };
 
         pst {
-            bindings = <&kp LG(V)>;
+            bindings = <&kp LG(RIGHT_ARROW)>;
             key-positions = <12 13>;
         };
 
