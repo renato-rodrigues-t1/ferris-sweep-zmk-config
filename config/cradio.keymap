@@ -124,7 +124,7 @@
 &mt ESC Q    &kp W    &kp F    &kp P          &kp G             &kp J                   &kp L     &kp U      &mt LPAR Y  &kp LBKT
 &mt LSHFT A  &lt 4 R  &lt 1 S  &lt 2 T        &kp D             &kp M                   &kp N     &kp E      &kp I       &mt RSHFT O
 &kp Z        &kp X    &kp C    &kp V          &kp B             &kp K                   &kp H     &kp COMMA  &kp DOT     &kp FSLH
-                               &mt LSHFT ENTER  &mt LCMD SPACE  &mt LGUI(C) LGUI(V)  &mt LCTRL BSPC
+                               &mt LSHFT ENTER  &mt LCMD SPACE  &mt LEFT_GUI(C) LEFT_GUI(V)  &mt LCTRL BSPC
             >;
         };
 
