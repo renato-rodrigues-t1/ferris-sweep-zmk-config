@@ -54,16 +54,6 @@
             key-positions = <27 28>;
         };
 
-        cp {
-            bindings = <&kp LG(C)>;
-            key-positions = <11 12>;
-        };
-
-        pst {
-            bindings = <&kp LG(V)>;
-            key-positions = <12 13>;
-        };
-
         quotes {
             bindings = <&kp SQT>;
             key-positions = <18 19>;
