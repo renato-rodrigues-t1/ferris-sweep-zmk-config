@@ -137,7 +137,7 @@
 
         nav {
             bindings = <
-&trans  &trans            &trans  &trans          &trans    &trans                          &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &trans            &trans  &trans          &trans    &pass                           &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
 &trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans    &kp HOME                        &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
 &trans  &trans            &trans  &trans          &trans    &trans                          &mkp LCLK  &pass     &mkp RCLK          &trans
                                   &kp BACKSPACE   &trans    &mt LA(LS(LC(LEFT_GUI))) SPACE  &kp DEL
