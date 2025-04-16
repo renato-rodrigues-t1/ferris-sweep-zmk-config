@@ -47,11 +47,13 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <17 18>;
+            layers = <1 0 3 5>;
         };
 
         cp {
             bindings = <&kp LG(LEFT_ARROW)>;
             key-positions = <11 12>;
+            layers = <0 1 3 2 5>;
         };
 
         pst {
