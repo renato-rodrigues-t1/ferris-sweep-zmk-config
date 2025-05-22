@@ -128,19 +128,19 @@
 
         default_layer {
             bindings = <
-&mt ESC Q    &kp W    &kp F    &kp P            &kp G             &kp J            &kp L     &kp U      &mt LPAR Y  &kp LBKT
-&mt LCTRL A  &lt 4 R  &lt 1 S  &lt 2 T          &kp D             &kp M            &kp N     &kp E      &kp I       &mt RSHFT O
-&kp Z        &kp X    &kp C    &kp V            &kp B             &kp K            &kp H     &kp COMMA  &kp DOT     &kp FSLH
-                             &mt LCMD SPACE &mt LSHFT ENTER      &mt LG(C) LG(V)  &kp BSPC
+&mt ESC Q    &kp W    &kp F    &kp P           &kp G              &kp J      &kp L     &kp U      &mt LPAR Y  &kp LBKT
+&mt LCTRL A  &lt 4 R  &lt 1 S  &lt 2 T         &kp D              &kp M      &kp N     &kp E      &kp I       &mt RSHFT O
+&kp Z        &kp X    &kp C    &kp V           &kp B              &kp K      &kp H     &kp COMMA  &kp DOT     &kp FSLH
+                               &mt LCMD SPACE  &mt LSHFT LG(C)    &kp ENTER  &kp BSPC
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans            &trans  &trans          &trans    &pass                           &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans    &kp HOME                        &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
-&trans  &trans            &trans  &trans          &trans    &trans                          &mkp LCLK  &pass     &mkp RCLK          &trans
-                                  &kp BACKSPACE   &trans    &mt LA(LS(LC(LEFT_GUI))) SPACE  &kp DEL
+&trans  &trans            &trans  &trans          &trans       &pass                           &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans       &kp HOME                        &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
+&trans  &trans            &trans  &trans          &trans       &trans                          &mkp LCLK  &pass     &mkp RCLK          &trans
+                                  &kp BACKSPACE   &kp LG(V)    &mt LA(LS(LC(LEFT_GUI))) SPACE  &kp DEL
             >;
         };
 
