@@ -121,6 +121,13 @@
             bindings = <&kp U &kp S &kp E &kp R &kp P &kp E &kp P &kp N3 &kp N &kp STAR>;
             label = "NEW_MACRO";
         };
+
+        passVz: pass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp S &kp E &kp R &kp P &kp E &kp P &kp N3 &kp N &kp STAR &kp LS(V) &kp LS(T) &kp N2 &kp N5 &kp N0 &kp N8 &kp N0 &kp N4>;
+            label = "PASS";
+        };
     };
 
     keymap {
@@ -137,9 +144,9 @@
 
         nav {
             bindings = <
-&trans  &trans            &trans  &trans          &trans       &pass                           &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &trans            &trans  &trans          &trans       &passVz                         &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
 &trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans       &kp HOME                        &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
-&trans  &trans            &trans  &trans          &trans       &trans                          &mkp LCLK  &pass     &mkp RCLK          &trans
+&trans  &trans            &trans  &trans          &trans       &trans                          &mkp LCLK  &passVz   &mkp RCLK          &trans
                                   &kp BACKSPACE   &kp LG(V)    &mt LA(LS(LC(LEFT_GUI))) SPACE  &kp DEL
             >;
         };
@@ -149,7 +156,7 @@
 &trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &mt PLUS EQUAL   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &kp RBKT
 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &mt ASTRK MINUS  &mt DLLR NUMBER_4       &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &kp GRAVE
 &trans    &trans    &trans    &trans    &trans       &kp NUMBER_0     &mt EXCL NUMBER_1       &mt AT NUMBER_2        &mt HASH NUMBER_3   &mt PIPE BACKSLASH
-                              &trans    &trans       &trans           &trans
+                              &trans    &passVz      &trans           &trans
             >;
         };
 
