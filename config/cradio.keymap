@@ -112,6 +112,16 @@
             bindings = <&none>;
             key-positions = <0 10 20>;
         };
+
+        winUp {
+            bindings = <&kt LG(UP_ARROW)>;
+            key-positions = <1 2 3>;
+        };
+
+        winDown {
+            bindings = <&kp LG(DOWN_ARROW)>;
+            key-positions = <21 22 23>;
+        };
     };
 
     macros {
@@ -135,10 +145,10 @@
 
         default_layer {
             bindings = <
-&mt ESC Q    &kp W    &kp F    &kp P           &kp G                     &kp J          &kp L            &kp U      &mt LPAR Y  &kp LBKT
-&mt LCTRL A  &lt 4 R  &lt 1 S  &lt 2 T         &kp D                     &kp M          &kp N            &kp E      &kp I       &mt RSHFT O
-&kp Z        &kp X    &kp C    &kp V           &kp B                     &kp K          &kp H            &kp COMMA  &kp DOT     &kp FSLH
-                               &mt LCMD ENTER  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &mt LC(C) LC(V)
+&mt ESC Q       &mt LA(F4) W  &mt LC(F) F  &mt LG(RS(S)) P  &kp G                     &kp J          &kp L            &kp U      &mt LPAR Y  &kp LBKT
+&mt LCTRL A     &lt 4 R       &lt 1 S      &lt 2 T          &kp D                     &kp M          &kp N            &kp E      &kp I       &mt RSHFT O
+&mt LEFT_ALT Z  &kp X         &kp C        &kp V            &kp B                     &kp K          &kp H            &kp COMMA  &kp DOT     &kp FSLH
+                                           &mt LCMD ENTER   &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &mt LC(C) LC(V)
             >;
         };
 
@@ -153,10 +163,10 @@
 
         nums {
             bindings = <
-&trans   &kp LBKT  &kp LBRC        &kp RBRC         &trans             &mt LBRC LBKT    &mt AMPERSAND NUMBER_7          &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &mt PLUS EQUAL
-&none    &none     &kp LEFT_SHIFT  &none            &none              &kp RBRC RBKT    &mt DLLR NUMBER_4               &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &mt ASTRK MINUS
-&passVz  &trans    &trans          &trans           &trans             &none            &mt EXCL NUMBER_1               &mt AT NUMBER_2        &mt HASH NUMBER_3   &mt PIPE BACKSLASH
-                                   &mt LC(X) LC(C)  &mt LG(V) LC(V)    &trans           &mt RIGHT_PARENTHESIS NUMBER_0
+&trans   &trans  &trans          &trans           &trans             &mt LBRC LBKT           &mt AMPERSAND NUMBER_7          &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &mt PLUS EQUAL
+&none    &none   &kp LEFT_SHIFT  &none            &none              &mt RBRC RIGHT_BRACKET  &mt DLLR NUMBER_4               &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &mt ASTRK MINUS
+&passVz  &trans  &trans          &trans           &trans             &none                   &mt EXCL NUMBER_1               &mt AT NUMBER_2        &mt HASH NUMBER_3   &mt PIPE BACKSLASH
+                                 &mt LC(X) LC(C)  &mt LG(V) LC(V)    &trans                  &mt RIGHT_PARENTHESIS NUMBER_0
             >;
         };
 
