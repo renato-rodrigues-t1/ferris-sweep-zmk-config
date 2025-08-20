@@ -135,28 +135,28 @@
 
         default_layer {
             bindings = <
-&mt ESC Q    &kp W    &kp F    &kp P           &kp G              &kp J      &kp L     &kp U      &mt LPAR Y  &kp LBKT
-&mt LCTRL A  &lt 4 R  &lt 1 S  &lt 2 T         &kp D              &kp M      &kp N     &kp E      &kp I       &mt RSHFT O
-&kp Z        &kp X    &kp C    &kp V           &kp B              &kp K      &kp H     &kp COMMA  &kp DOT     &kp FSLH
-                               &mt LCMD SPACE  &mt LSHFT LG(C)    &kp ENTER  &kp BSPC
+&mt ESC Q    &kp W    &kp F    &kp P           &kp G                     &kp J          &kp L            &kp U      &mt LPAR Y  &kp LBKT
+&mt LCTRL A  &lt 4 R  &lt 1 S  &lt 2 T         &kp D                     &kp M          &kp N            &kp E      &kp I       &mt RSHFT O
+&kp Z        &kp X    &kp C    &kp V           &kp B                     &kp K          &kp H            &kp COMMA  &kp DOT     &kp FSLH
+                               &mt LCMD ENTER  &mt LEFT_CONTROL SPACE    &kp BACKSPACE  &mt LC(C) LC(V)
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans            &trans  &trans          &trans       &passVz                         &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans       &kp HOME                        &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
-&trans  &trans            &trans  &trans          &trans       &trans                          &mkp LCLK  &passVz   &mkp RCLK          &trans
-                                  &kp BACKSPACE   &kp LG(V)    &mt LA(LS(LC(LEFT_GUI))) SPACE  &kp DEL
+&trans  &trans            &trans  &trans          &trans        &passVz                          &trans     &kp UP    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans  &kp LC(LEFT_ALT)  &trans  &kp LEFT_SHIFT  &trans        &kp HOME                         &kp LEFT   &kp DOWN  &kp RIGHT          &kp END
+&trans  &trans            &trans  &trans          &trans        &trans                           &mkp LCLK  &passVz   &mkp RCLK          &trans
+                                  &kp BACKSPACE   &kp DELETE    &mt LA(LS(LC(LEFT_GUI))) DELETE  &kp DEL
             >;
         };
 
         nums {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &mt PLUS EQUAL   &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &kp RBKT
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &mt ASTRK MINUS  &mt DLLR NUMBER_4       &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp NUMBER_0     &mt EXCL NUMBER_1       &mt AT NUMBER_2        &mt HASH NUMBER_3   &mt PIPE BACKSLASH
-                              &trans    &passVz      &trans           &trans
+&trans   &kp LBKT  &kp LBRC        &kp RBRC         &trans             &mt PLUS EQUAL   &mt AMPERSAND NUMBER_7          &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &kp RBKT
+&none    &none     &kp LEFT_SHIFT  &none            &none              &mt ASTRK MINUS  &mt DLLR NUMBER_4               &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &none
+&passVz  &trans    &trans          &trans           &trans             &none            &mt EXCL NUMBER_1               &mt AT NUMBER_2        &mt HASH NUMBER_3   &mt PIPE BACKSLASH
+                                   &mt LC(X) LC(C)  &mt LG(V) LC(V)    &trans           &mt RIGHT_PARENTHESIS NUMBER_0
             >;
         };
 
