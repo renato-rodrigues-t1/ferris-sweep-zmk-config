@@ -153,8 +153,8 @@
 
         nums {
             bindings = <
-&trans   &kp LBKT  &kp LBRC        &kp RBRC         &trans             &mt PLUS EQUAL   &mt AMPERSAND NUMBER_7          &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &kp RBKT
-&none    &none     &kp LEFT_SHIFT  &none            &none              &mt ASTRK MINUS  &mt DLLR NUMBER_4               &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &none
+&trans   &kp LBKT  &kp LBRC        &kp RBRC         &trans             &mt LBRC LBKT    &mt AMPERSAND NUMBER_7          &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &mt PLUS EQUAL
+&none    &none     &kp LEFT_SHIFT  &none            &none              &kp RBRC RBKT    &mt DLLR NUMBER_4               &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &mt ASTRK MINUS
 &passVz  &trans    &trans          &trans           &trans             &none            &mt EXCL NUMBER_1               &mt AT NUMBER_2        &mt HASH NUMBER_3   &mt PIPE BACKSLASH
                                    &mt LC(X) LC(C)  &mt LG(V) LC(V)    &trans           &mt RIGHT_PARENTHESIS NUMBER_0
             >;
@@ -183,8 +183,8 @@
         layers {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &to 0   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &to 3   &to 4   &to 5   &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &to 0   &to 1   &to 2   &trans
                         &trans  &trans    &trans  &trans
             >;
         };
