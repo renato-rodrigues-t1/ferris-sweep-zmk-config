@@ -138,6 +138,13 @@
             bindings = <&kp U &kp S &kp E &kp R &kp P &kp E &kp P &kp N3 &kp N &kp STAR &kp LS(V) &kp LS(T) &kp N2 &kp N5 &kp N0 &kp N8 &kp N0 &kp N4>;
             label = "PASS";
         };
+
+        admin: admin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp D &kp M &kp I &kp N &kp TAB &kp A &kp D &kp M &kp I &kp N &kp ENTER>;
+            label = "ADMIN";
+        };
     };
 
     keymap {
@@ -173,7 +180,7 @@
         nums {
             bindings = <
 &trans   &trans  &trans          &trans           &trans             &mt LBRC LBKT           &mt AMPERSAND NUMBER_7          &mt ASTERISK NUMBER_8  &mt LPAR NUMBER_9   &mt PLUS EQUAL
-&none    &none   &kp LEFT_SHIFT  &none            &none              &mt RBRC RIGHT_BRACKET  &mt DLLR NUMBER_4               &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &mt ASTRK MINUS
+&admin   &none   &kp LEFT_SHIFT  &none            &none              &mt RBRC RIGHT_BRACKET  &mt DLLR NUMBER_4               &mt PERCENT NUMBER_5   &mt CARET NUMBER_6  &mt ASTRK MINUS
 &passVz  &trans  &trans          &trans           &trans             &none                   &mt EXCL NUMBER_1               &mt AT NUMBER_2        &mt HASH NUMBER_3   &mt PIPE BACKSLASH
                                  &mt LC(X) LC(C)  &mt LG(V) LC(V)    &trans                  &mt RIGHT_PARENTHESIS NUMBER_0
             >;
